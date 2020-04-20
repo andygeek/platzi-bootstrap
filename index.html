@@ -11,11 +11,8 @@
     <title>Hello, world!</title>
 </head>
 <body>
-    <!-- Los cambios son los siguientes: dar al img un ancho de 80px mediante el id header-->
-    <!-- Cambiar el fonde de light a dark del nav (navbar-dark bg-dark)-->
     <!--Header -->
     <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <!--Este continer es importante ya que acoplara nuestro nav dentro del expacio visible de la web-->
         <div class="container">
         <a class="navbar-brand" href="#">
             <img src="assets/images/platzi-logo.png" alt="Platzi logo">
@@ -26,8 +23,6 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!-- este originalmente tiene mr-auto que calcula automaticamente el margen derecho para pegarlo a la izquierda,
-            ahora usaremos ml-auto para calcular el margen izquierdo -->
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
                     <a class="nav-link" href="#">La conferencia</span></a>
@@ -41,7 +36,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Conviértete en orador</a>
                 </li>
-                <!--Queremos que la gente compre tiquets asi que resaltaremos este texto, con una clase que crearemos en css-->
                 <li class="nav-item">
                     <a class="nav-link text-platzi" href="#">Comprar ticket</a>
                 </li>
@@ -51,7 +45,25 @@
         </div>
     </nav>
     <!-- Fin Header -->
-
+    <!-- Main -->
+    <main id="main">
+        <!--Por defecto el carrusel realiza una pausa cuando colocamos el maouse encima, para evitar eso usamos 'data-pause'-->
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel" data-pause="false">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="assets/images/hawaii.jpg" class="d-block w-100" alt="Hawaii 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/hawaii2.jpg" class="d-block w-100" alt="Hawaii 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/hawaii3.jpeg" class="d-block w-100" alt="Hawaii 3">
+                </div>
+            </div>
+            <!--Nuestro carrusel no tendra controles-->
+        </div>
+    </main>
+    <!-- Fin Main -->
     <!-- Footer -->
     <footer id="footer" class="pb-4 pt-4">
         <div class="container">

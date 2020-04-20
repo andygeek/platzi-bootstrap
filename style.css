@@ -1,10 +1,18 @@
 .text-platzi {
     color: #97c93e !important;
 }
-/* !important sirve para tener preferencia en este valor que cualquier otro que le pueda dar nuestro codigo despues */
 
 #header img{
     width: 80px;
+}
+/*La unidad vh es el porcentaje del alto de la pantalla
+  El objet-fit nos permite colocar stilos para que la imagen se acople
+  en este caso cover para que no pierda proporcion
+  - Tambien a la imagen le pondremos un filtro de escala de grises*/
+#main .carousel-inner img{
+    max-height: 70vh;
+    object-fit: cover;
+    filter: grayscale(70%);
 }
 
 #footer{
