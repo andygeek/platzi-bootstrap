@@ -1,3 +1,12 @@
+.text-platzi {
+    color: #97c93e !important;
+}
+/* !important sirve para tener preferencia en este valor que cualquier otro que le pueda dar nuestro codigo despues */
+
+#header img{
+    width: 80px;
+}
+
 #footer{
     background: linear-gradient(90deg, #1c3643, #273b47 25%, #1e5372);
 }

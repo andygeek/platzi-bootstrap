@@ -11,10 +11,48 @@
     <title>Hello, world!</title>
 </head>
 <body>
-    <!-- Este es un ejercicio interezante, hacemos que para dispositivos lg(large, grandes) la grilla se reparta
-    pero para dispositivos pequeños (los demas) cada grilla valga 12(ancho completo)-->
+    <!-- Los cambios son los siguientes: dar al img un ancho de 80px mediante el id header-->
+    <!-- Cambiar el fonde de light a dark del nav (navbar-dark bg-dark)-->
+    <!--Header -->
+    <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <!--Este continer es importante ya que acoplara nuestro nav dentro del expacio visible de la web-->
+        <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="assets/images/platzi-logo.png" alt="Platzi logo">
+            Conf Hawaii
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <!-- Usar pb-4 es un espacio de bootstrap que se manipula a travez de las clases -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- este originalmente tiene mr-auto que calcula automaticamente el margen derecho para pegarlo a la izquierda,
+            ahora usaremos ml-auto para calcular el margen izquierdo -->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">La conferencia</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Los oradores</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">El lugar y la fecha</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Conviértete en orador</a>
+                </li>
+                <!--Queremos que la gente compre tiquets asi que resaltaremos este texto, con una clase que crearemos en css-->
+                <li class="nav-item">
+                    <a class="nav-link text-platzi" href="#">Comprar ticket</a>
+                </li>
+            </ul>
+
+        </div>
+        </div>
+    </nav>
+    <!-- Fin Header -->
+
+    <!-- Footer -->
     <footer id="footer" class="pb-4 pt-4">
         <div class="container">
             <div class="row text-center">
@@ -39,6 +77,7 @@
             </div>
         </div>
     </footer>
+    <!-- Fin Footer -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
