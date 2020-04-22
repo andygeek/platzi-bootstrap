@@ -10,11 +10,8 @@
     <link rel="stylesheet" href="style.css">
     <title>Hello, world!</title>
 </head>
-<!--Necesitamos agregar estos atributos para espiar al usuario-->
-<!--El 'data-offset="57"' Es para que el menu se ilumine correctamente y no mas abajito de lo debido, 57 es el ancho del navbar-->
 <body data-spy="scroll" data-target="#navbar" data-offset="57">
     <!--Header -->
-    <!--Para que el texto se alumbre dependiendo en que lugar estamos necesitamos colocar 'sticky-top'-->
     <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
         <a class="navbar-brand" href="#">
@@ -24,11 +21,9 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <!-- Este id va en el data-target-->
         <div class="collapse navbar-collapse" id="navbar">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <!--El numeral se usa para navegar dentro de la pagina usando el id de los elementos-->
                     <a class="nav-link" href="#main">La conferencia</span></a>
                 </li>
                 <li class="nav-item">
@@ -41,7 +36,8 @@
                     <a class="nav-link" href="#conviertete-en-orador">Conviértete en orador</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-platzi" href="#">Comprar ticket</a>
+                    <!-- Para que abra un modal necesita un data-target='#id_del_modal' y un data-toggle='modal' de la siguiente manera-->
+                    <a class="nav-link text-platzi" href="#" data-toggle="modal" data-target="#modalCompra">Comprar ticket</a>
                 </li>
             </ul>
 
@@ -72,7 +68,7 @@
                                     que no te debes perder. Ven a conocer al equipo de Platzi.
                                 </p>
                                 <a href="#" class="btn btn-outline-light mb-2">Quiero ser orador</a>
-                                <button type="button" class="btn btn-platzi mb-2">Comprar tickets</button>
+                                <button type="button" class="btn btn-platzi mb-2"  data-toggle="modal" data-target="#modalCompra">Comprar tickets</button>
                             </div>
                         </div>
                     </div>
@@ -242,6 +238,43 @@
         </div>
     </footer>
     <!-- Fin Footer -->
+
+    <!-- BOOTSTRAP recomienda que los modals vayan fuera de los elementos del html -->
+    <!-- Modal -->
+    <div class="modal fade" id="modalCompra" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Comprar tickets</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon1">@</span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <!--Aqui despues del formulario colocaré la alerta-->
+                    <div class="alert alert-warning" role="alert">
+                        Recibirás un correo para indicarte el proceso para adquirir tickets.
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-platzi">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
