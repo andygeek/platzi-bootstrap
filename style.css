@@ -40,3 +40,11 @@
     color: white;
 }
 
+/*Creamos nuestro propio boton*/
+
+.btn-platzi {
+    background-color: #97c93e;
+}
+.btn-platzi:hover{
+    background-color: #82ad36;
+}
