@@ -89,7 +89,6 @@
                 </div>
             </div>
             <div class="row">
-                <!--Aqui jugamos con la cantidad de card para cada tamaño de pantalla-->
                 <div class="col-md-4 col-lg-3 col-sm-6 mb-4">
                     <div class="card">
                         <img src="assets/speakers/sacha.jpg" class="card-img-top" alt="Foto de Sacha">
@@ -172,7 +171,8 @@
             <div class="row">
                 <div class="col text-center">
                     <small class="text-uppercase">Conviertete en un</small>
-                    <h2>Orador</h2>
+                    <!--Sin el data-toggle ni el el archivo javascript el pequeño tooltip será desestilizado-->
+                    <h2><abbr data-toggle="tooltip" title="SI UN ORADOR DE PLATZI CONF!!!">Orador</abbr></h2>
                 </div>
             </div>
             <div class="row">
@@ -184,7 +184,6 @@
                 <div class="col col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
                     <form>
                         <div class="form-row">
-                            <!--Agregando form-group le agrega margenens al conjunto de inputs-->
                             <div class="form-group col-12 col-md-6">
                                 <input type="text" class="form-control" placeholder="Nombre">
                             </div>
@@ -192,11 +191,9 @@
                                 <input type="text" class="form-control" placeholder="Apellido">
                             </div>
                         </div>
-                        <!--Agregamos un input text grande-->
                         <div class="form-row">
                             <div class="col form-group">
                                 <textarea name="text" class="form-control form-control-lg" placeholder="Sobre qué quieres hablar"></textarea>
-                                <!--Text muted es usado para darle un tono gris al texto-->
                                 <small class="form-text text-muted">
                                     Recuerda incluir un titulo a tu charla
                                 </small>
@@ -247,6 +244,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
+    <!--Debe de ser despues e colocar los demas archivos js de bootstrap-->
+    <script src="main.js"></script>
 </body>
 </html>
