@@ -47,8 +47,8 @@
     <!-- Fin Header -->
     <!-- Main -->
     <main id="main">
-        <!--Por defecto el carrusel realiza una pausa cuando colocamos el maouse encima, para evitar eso usamos 'data-pause'-->
-        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel" data-pause="false">
+        <!-- Cambiamos el id a 'carousel'-->
+        <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel" data-pause="false">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="assets/images/hawaii.jpg" class="d-block w-100" alt="Hawaii 1">
@@ -59,8 +59,31 @@
                 <div class="carousel-item">
                     <img src="assets/images/hawaii3.jpeg" class="d-block w-100" alt="Hawaii 3">
                 </div>
+                <div class="overlay">
+                    <div class="container">
+                        <!-- Tambien queremos que nuestro texto este centrado verticalmente asi que usamo align-items-center -->
+                        <div class="row align-items-center">
+                            <!--Si coloco solo col-6 dividira en dos la pantalla para todos, pero si uso el col-md-6, a partir de
+                            equipos medianos recien lo dividirá-->
+                            <!--Pero lo que busco es que corra una sierta cantidad de columans a ala derecha para eso usamos offset-md-6
+                            si usaria offset-md-3 estaria como centrado en la pantall-->
+                            <!--Y para que el texto este hacia la derecha en los medianos usamos text-md-right y para centrar en demas dispositivos usamos-->
+                            <!-- JUEGA CON ESTOS VALORES PARA APRENDER MÁS-->
+                            <div class="col-md-6 offset-md-6 text-center text-md-right">
+                                <h1>Platzi Conf Hawaii</h1>
+                                <!--Haremos que el exto desaparezca para dispositivos pequeños y que aparezca en dispositivos grandeas-->
+                                <p class="d-none d-md-block">
+                                    Platzi Conf llega por primera vez a Hawaii!! Será un evento unico
+                                    que no te debes perder. Ven a conocer al equipo de Platzi.
+                                </p>
+                                <a href="#">Quiero ser orador</a>
+                                <button type="button">Comprar tickets</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!--Nuestro carrusel no tendra controles-->
+
         </div>
     </main>
     <!-- Fin Main -->
