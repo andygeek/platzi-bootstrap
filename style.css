@@ -40,7 +40,13 @@
     color: white;
 }
 
-/*Creamos nuestro propio boton*/
+#place-time img{
+    max-width: 100%;
+}
+#place-time {
+    background: #343a40;
+    color: white;
+}
 
 .btn-platzi {
     background-color: #97c93e;
